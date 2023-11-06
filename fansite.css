@@ -1,0 +1,151 @@
+*{margin:0;
+padding: 0;}
+
+
+@font-face {
+    font-family: amiko;
+    src: url(fonts/Amiko-Regular.ttf);
+}
+@font-face {
+  font-family: trirong;
+  src: url(fonts/Trirong-Light.ttf);
+}
+@font-face {
+  font-family: pridi;
+  src: url(fonts/Pridi-Regular.ttf);
+}
+
+
+body{
+   /* background: linear-gradient(145deg, #f0f0f0, #cacaca);*/
+    height: 100vh;
+}
+
+header{
+    margin:5rem 0;
+}
+ul{
+    width: 100%;
+    height:5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header ul{
+    background: linear-gradient(145deg, #b06868, #d17c7c);
+}
+#foot1{
+    background: linear-gradient(145deg, #eba223, rgb(209, 188, 124));
+}
+#foot2{
+    background: linear-gradient(145deg, #23ebca, rgb(86, 136, 222));
+}
+li{
+    list-style: none;
+}
+
+a, a:visisted{
+
+}
+nav a, nav a:visited{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: pridi;
+}
+nav li{
+    height:5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+nav li:hover{
+    transform: skew(5deg);
+    background-color: #f4dfdf5c;
+
+}
+nav li a:hover{
+    transform: skew(justify-content);
+}
+
+
+
+
+
+h1{
+    font-family: trirong;
+    text-align: center;
+    color:white;
+    padding: 2rem 0;
+    background: linear-gradient(145deg, #688ab0, #7cb9d1);
+}
+h2{
+    font-family: trirong;
+    text-align: center;
+    color:white;
+    padding: 2rem 0;
+    background: linear-gradient(145deg, #dcc21c, #d0d17c);
+    transform: skew(-2deg);
+}
+h3{
+    font-family: trirong;
+    text-align: center;
+    color:white;
+    padding: 2rem 0;
+    background: linear-gradient(145deg, rgb(37, 152, 14), rgb(36, 176, 34));
+    transform: skew(-2deg);
+}
+
+p{
+    font-family: pridi;
+    width:80vw;
+    margin:3rem auto;
+    color: cadetblue;
+}
+
+#image{
+    height: 20rem;
+}
+#image, #programme{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+
+}
+#image img{
+    width: 33.3333333%;
+    transform: skew(2deg);
+    object-fit: cover;
+}
+
+#programme a{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5rem;
+    width:33.33%;
+}
+a h3{
+    text-decoration: none;
+    font-family: pridi;
+    color: chocolate;
+}
+a img{
+    width: 25rem;
+    transform: skew(-2deg);
+    object-fit: cover;
+}
+
+#photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    width: 60%;
+    margin: 3rem auto;
+}
+
+#photos img{
+    width:300px;
+}
