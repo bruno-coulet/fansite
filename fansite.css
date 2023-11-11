@@ -1,7 +1,21 @@
+/*
+        Styles généraux :
+        - polices, h1-h3
+        - body, header, footer, nav
+        - a
+
+        - Page accueil
+        - Page actualité
+        - Page realisations
+        - Page contact
+
+*/
+
 *{margin:0;
 padding: 0;}
 
 
+/*  --------- Fonts  --------- */
 @font-face {
     font-family: amiko;
     src: url(fonts/Amiko-Regular.ttf);
@@ -14,16 +28,62 @@ padding: 0;}
   font-family: pridi;
   src: url(fonts/Pridi-Regular.ttf);
 }
+h1,h2,h3{
+    font-family: trirong;
+    text-align: center;
+    color:white;
+    font-size:inherit;
+}
+h2, h3{
+    margin-top: 0.3rem;
+}
+h1{
+    padding: 2rem 0;
+    background: linear-gradient(145deg, #688ab0, #7cb9d1);
+}
+h2{
+    padding: 1rem 0;
+    background: linear-gradient(145deg, #dcc21c, #d0d17c);
+    transform: skew(-2deg);
+}
+h3{
+    padding: 0.5rem 0;
+    background: linear-gradient(145deg, rgb(73 215 44), rgb(23 130 22));
+    transform: skew(-2deg);
+}
+#events h3{
+    font-family: pridi;
+   background: none;
+}
+p{
+    font-family: pridi;
+    width:80vw;
+    margin:3rem auto;
+    color: cadetblue;
+}
 
+
+
+/*  ---------  Header Nav footer etc...   --------- */
 
 body{
-   /* background: linear-gradient(145deg, #f0f0f0, #cacaca);*/
     height: 100vh;
+
+}
+header {
+    background-image: url(./images/tetris.jpg);
+    /* background-color: black; */
+    background-size: contain;
+    /* margin:5rem 0; */
+    height: 200px;
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 0.3rem; */
+}
+nav{
+    width: 100%;;
 }
 
-header{
-    margin:5rem 0;
-}
 ul{
     width: 100%;
     height:5rem;
@@ -35,6 +95,13 @@ ul{
 header ul{
     background: linear-gradient(145deg, #b06868, #d17c7c);
 }
+@media (max-width: 768px) {
+    header ul{
+        display: flex;
+        flex-direction: column;
+        height: 130px;
+}
+}
 #foot1{
     background: linear-gradient(145deg, #eba223, rgb(209, 188, 124));
 }
@@ -44,15 +111,18 @@ header ul{
 li{
     list-style: none;
 }
-
-a, a:visisted{
-
-}
-nav a, nav a:visited{
-    color: rgb(255, 255, 255);
+a{
     text-decoration: none;
+    color:burlywood;
+}
+a:hover{
+    color:chocolate;
+}
+nav a, nav a:visited, figure a{
+    color: rgb(255, 255, 255);
     font-family: pridi;
 }
+
 nav li{
     height:5rem;
     display: flex;
@@ -67,85 +137,289 @@ nav li:hover{
 nav li a:hover{
     transform: skew(justify-content);
 }
+a{letter-spacing: 1px;}
 
-
-
-
-
-h1{
-    font-family: trirong;
-    text-align: center;
-    color:white;
-    padding: 2rem 0;
-    background: linear-gradient(145deg, #688ab0, #7cb9d1);
+/*  --------- Colorise le lien de la page actuelle dans header & footer  --------- */
+#accueil .accueil{
+    color: #DAC52E;
 }
-h2{
-    font-family: trirong;
-    text-align: center;
-    color:white;
-    padding: 2rem 0;
-    background: linear-gradient(145deg, #dcc21c, #d0d17c);
-    transform: skew(-2deg);
+#accueil #foot1 .accueil{
+color: #375fae;
 }
-h3{
-    font-family: trirong;
-    text-align: center;
-    color:white;
-    padding: 2rem 0;
-    background: linear-gradient(145deg, rgb(37, 152, 14), rgb(36, 176, 34));
-    transform: skew(-2deg);
+#actualite .actualite{
+    color: #DAC52E;
 }
-
-p{
-    font-family: pridi;
-    width:80vw;
-    margin:3rem auto;
-    color: cadetblue;
+#actualite #foot1 .actualite{
+    color: #375fae;
+    }
+#realisation .realisation{
+    color: #DAC52E;
+}
+#realisation #foot1 .realisation{
+    color: #375fae;
+    }
+#contact .contact{
+    color: #DAC52E;
+}
+#contact #foot1 .contact{
+    color: #375fae;
 }
 
-#image{
+
+
+
+
+
+
+/*  --------- ACCUEIL  --------- */
+#intro{
     height: 20rem;
 }
-#image, #programme{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-evenly;
+@media (max-width: 768px) {
+    #intro{
+        height: 8rem;
+    }
 
 }
-#image img{
+#intro figure{
+
+    overflow: hidden;
+}
+
+#intro img{
     width: 33.3333333%;
     transform: skew(2deg);
     object-fit: cover;
 }
 
-#programme a{
+
+#intro,
+#events{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-top: 0.3rem;
+}
+@media (max-width: 768px) {
+    #events{
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+#events{
+    margin-bottom:5rem;
+}
+
+figure.events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+   
+}
+@media (max-width: 768px) {
+    figure.events{
+        width: 23rem;
+        margin: auto;
+    }
+}
+@media (max-width: 768px) {
+    figure.events{
+        width: 15rem;
+
+    }
+}
+
+
+figure.events:nth-child(1){
+background: rgba(220, 187, 69, 1);
+border-radius: 10px;
+box-shadow: 0 4px 30px rgb(0, 0, 0);
+backdrop-filter: blur(4.6px);
+-webkit-backdrop-filter: blur(4.6px);
+border: 1px solid rgba(220, 187, 69, 0.25);
+transform: skew(3deg);
+}
+figure.events:nth-child(1) img{
+    transform: skew(0deg);
+}
+figure.events:nth-child(1) h3{
+    transform: skew(-3deg);
+}
+figure.events:nth-child(1):hover{
+background: rgba(220, 187, 69, 0.688);
+}
+
+figure.events:nth-child(2){
+background: rgb(230 104 66);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgb(0, 0, 0);
+backdrop-filter: blur(4.6px);
+-webkit-backdrop-filter: blur(4.6px);
+border: 1px solid rgba(230, 104, 66, 0.25);
+transform: skew(-3deg);
+}
+figure.events:nth-child(2) img{
+    transform: skew(0deg);
+}
+figure.events:nth-child(2) h3{
+    transform: skew(3deg);
+}
+figure.events:nth-child(2):hover{
+background: rgba(230, 104, 66, 0.68);
+
+}
+
+figure.events:nth-child(3){
+background:rgba(50, 206, 242, 1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+backdrop-filter: blur(4.6px);
+-webkit-backdrop-filter: blur(4.6px);
+border: 1px solid rgba(50, 206, 242, 0.25);
+transform: skew(3deg);
+}
+figure.events:nth-child(3) img{
+    transform: skew(0deg);
+}
+figure.events:nth-child(3) h3{
+    transform: skew(-3deg);
+}
+figure.events:nth-child(3):hover{
+    background: rgba(50, 206, 242, 0.7);
+
+}
+
+#events a{
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 5rem;
-    width:33.33%;
+    width:20%;
+    background: none;
 }
-a h3{
-    text-decoration: none;
-    font-family: pridi;
-    color: chocolate;
-}
+
 a img{
-    width: 25rem;
+    width: 18rem;
     transform: skew(-2deg);
     object-fit: cover;
 }
+@media (min-width: 768px) AND (max-width: 980px){
+    a img{
+        width: 13rem;
+    }
+}
+@media (max-width: 400px){
+    a img{
+        width: 10rem;
+    }
+}
 
-#photos{
+#video{
+    display: flex;
+    justify-content: center;
+    width:55%;
+    margin:5rem auto;
+    border-radius: 10px
+}
+/*  --------- DEBUT SECTION PHOTOS "futures projets"  --------- */
+#container{
+    padding: 3rem;
+    background-image: url(images/amalfitaine-0.2.png);
+    margin: 0.3rem 0;
+    display: flex;
+    justify-content: center;
+   
+}
+
+#projets{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-    width: 60%;
-    margin: 3rem auto;
+    /* width: 60%; */
+    /* margin: 3rem auto; */
+    column-gap: 0;
+}
+@media (max-width: 1300px){
+    #projet{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-#photos img{
-    width:300px;
+#projets img{
+   width:100%;
+}
+/*  --------- FIN SECTION PHOTOS "futures réalisation"  --------- */
+
+
+
+
+
+
+/*  ---------  PAGE CONTACT  --------- */
+
+h2{
+text-align: center;
+}
+
+.superpose {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 3rem;
+}
+#under{
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+z-index: 0;
+}
+.grid{
+    overflow: hidden;
+    width:100%;
+    aspect-ratio: 1 / 1;
+}
+#under img{
+    width: 100%; 
+    opacity: 0.6;
+    z-index: 9;
+    transition: transform 0.3s; /* Ajoute une transition fluide au zoom */
+
+}
+#under img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    }
+
+
+
+
+form{
+position:absolute;
+width: 29rem;
+padding: 4rem;
+margin: 5rem auto 2rem;  
+border-radius: 10px;
+background: linear-gradient(145deg, #c04820, #a13c1b);
+}
+label{color: white;
+font-family: arima;}
+input, select, textarea{
+    border-radius: 5px;
+    color: 666B2F;
+    padding: 0.5rem;
+    border: none;
+    font-family: arima;
+}
+input:active, select:active, textarea:active,
+input:focus, select:focus, textarea:focus,
+input:focus-visible, select:focus-visible, textarea:focus-visible
+{
+    border: 1px solid #666B2F;
+    outline: none;
 }
