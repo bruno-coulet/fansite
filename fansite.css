@@ -14,7 +14,6 @@
 *{margin:0;
 padding: 0;}
 
-
 /*  --------- Fonts  --------- */
 @font-face {
     font-family: amiko;
@@ -68,17 +67,13 @@ p{
 
 body{
     height: 100vh;
-
 }
 header {
     background-image: url(./images/tetris.jpg);
-    /* background-color: black; */
     background-size: contain;
-    /* margin:5rem 0; */
     height: 200px;
     display: flex;
     align-items: center;
-    /* margin-bottom: 0.3rem; */
 }
 nav{
     width: 100%;;
@@ -100,7 +95,7 @@ header ul{
         display: flex;
         flex-direction: column;
         height: 130px;
-}
+    }
 }
 #foot1{
     background: linear-gradient(145deg, #eba223, rgb(209, 188, 124));
@@ -132,7 +127,6 @@ nav li{
 nav li:hover{
     transform: skew(5deg);
     background-color: #f4dfdf5c;
-
 }
 nav li a:hover{
     transform: skew(justify-content);
@@ -181,10 +175,7 @@ color: #375fae;
     }
 
 }
-#intro figure{
-
-    overflow: hidden;
-}
+#intro figure{ overflow: hidden;}
 
 #intro img{
     width: 33.3333333%;
@@ -208,16 +199,13 @@ color: #375fae;
     }
 }
 
-#events{
-    margin-bottom:5rem;
-}
+#events{ margin-bottom:5rem;}
 
 figure.events{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-   
+    justify-content: space-evenly; 
 }
 @media (max-width: 768px) {
     figure.events{
@@ -228,7 +216,6 @@ figure.events{
 @media (max-width: 768px) {
     figure.events{
         width: 15rem;
-
     }
 }
 
@@ -269,7 +256,6 @@ figure.events:nth-child(2) h3{
 }
 figure.events:nth-child(2):hover{
 background: rgba(230, 104, 66, 0.68);
-
 }
 
 figure.events:nth-child(3){
@@ -289,7 +275,6 @@ figure.events:nth-child(3) h3{
 }
 figure.events:nth-child(3):hover{
     background: rgba(50, 206, 242, 0.7);
-
 }
 
 #events a{
@@ -326,22 +311,24 @@ a img{
     margin:5rem auto;
     border-radius: 10px
 }
+@media (max-width: 400px){
+    #video{
+        width: 90%;
+    }
+}
 /*  --------- DEBUT SECTION PHOTOS "futures projets"  --------- */
 #container{
     padding: 3rem;
     background-image: url(images/amalfitaine-0.2.png);
     margin: 0.3rem 0;
     display: flex;
-    justify-content: center;
-   
+    justify-content: center; 
 }
 
 #projets{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-    /* width: 60%; */
-    /* margin: 3rem auto; */
     column-gap: 0;
 }
 @media (max-width: 1300px){
@@ -350,9 +337,7 @@ a img{
     }
 }
 
-#projets img{
-   width:100%;
-}
+#projets img{width:100%;}
 /*  --------- FIN SECTION PHOTOS "futures réalisation"  --------- */
 
 
@@ -362,9 +347,8 @@ a img{
 
 /*  ---------  PAGE CONTACT  --------- */
 
-h2{
-text-align: center;
-}
+h2{text-align: center;}
+
 
 .superpose {
 position: relative;
@@ -389,7 +373,6 @@ z-index: 0;
     opacity: 0.6;
     z-index: 9;
     transition: transform 0.3s; /* Ajoute une transition fluide au zoom */
-
 }
 #under img:hover{
     opacity: 1;
@@ -407,8 +390,10 @@ margin: 5rem auto 2rem;
 border-radius: 10px;
 background: linear-gradient(145deg, #c04820, #a13c1b);
 }
-label{color: white;
-font-family: arima;}
+label{
+    color: white;
+    font-family: arima;
+}
 input, select, textarea{
     border-radius: 5px;
     color: 666B2F;
